@@ -1,0 +1,222 @@
+@import "_mixins";
+@import "_config";
+
+/* font-family: masqualero, sans-serif;
+font-weight: 300;
+font-weight: 400;
+font-weight: 600;
+font-weight: 700;
+font-style: normal;
+font-style: italic;
+font-family: covik-sans, sans-serif;
+font-weight: 400;
+font-weight: 600;
+font-weight: 700;
+font-style: normal;
+font-style: italic; */
+
+$masqualero: "masqualero", "serif";
+$covik: "covik-sans", "sans-serif";
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+
+$vassarBurgundy: #951829;
+$vassarDarkBurgundy: #641A2B;
+$darkGray: #63666A;
+$gold: #C6AA76;
+$red: #ED1C24;
+$cream: #FFF8EF;
+$rose: #F2D4D7;
+$lightGray: #D0D0CE;
+
+.u-lHeader {
+    background-image: url(../images/header-bg.jpg);
+    background-position: center center;
+    /* &:not(.u-lHeader--inner) .u-Masthead__head {
+        color: $vassarDarkBurgundy;
+    }
+    &:not(.u-lHeader--inner) {
+        a.u-Masthead__siteName--link {
+            color: $vassarDarkBurgundy;
+        }
+        a.u-Masthead__siteName--link:visited {
+            color: $vassarDarkBurgundy;
+        }
+        a.u-Masthead__siteName--link:focus {
+            color: $vassarDarkBurgundy;
+        }
+        a.u-Masthead__siteName--link:hover {
+            color: #fff
+        }
+        a.u-Masthead__siteName--link:active {
+            color: #fff
+        }
+        a.u-Masthead__siteName--link:focus,.u-lHeader:not(.u-lHeader--inner) a.u-Masthead__siteName--link:hover {
+            background-color: $vassarDarkBurgundy;
+        }
+    } */
+}
+.u-Masthead__head {
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-family: $covik;
+    font-weight: $semiBold;
+    font-size: 2.25rem;
+}
+.u-Masthead__siteName--link:link {
+    border-bottom: none
+}
+.u-NavSite.u-NavSite__main {
+    padding-bottom: 3em;
+    .u-NavSite__level--1 .u-NavSite__item {
+        font: $semiBold 1.1em/1.1 $covik;
+    }
+}
+.PageNavContainer .Module__title {
+    font-family: $covik;
+    font-weight: $regular;
+}
+.u-pageTitle,
+.u-lMain .Row__title, 
+.u-lMain h2 {
+    font-size: 1.33em;
+    text-transform: uppercase;
+    font-family: $covik;
+    color: $vassarDarkBurgundy;
+    padding-bottom: 0;
+    font-weight: $semiBold;
+}
+.u-lMain .Row__title, 
+.u-lMain h2 {
+    font-size: 1.2em;
+    font-weight: $regular;
+    margin-bottom: .5em;
+}
+.u-lMain h2 { 
+    scroll-margin-top: 2em;
+}
+.u-lMain h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: $covik;
+    color: $vassarDarkBurgundy;
+    padding-bottom: 0;
+    font-weight: $regular;
+}
+.RowContainer {
+    margin-bottom: 2em;
+}
+.figure--image {
+    display: flex;
+    flex-direction: column-reverse;
+    img {
+        width: 100%;
+        max-width: inherit;
+    }
+}
+.cream-red img {
+    margin-top: 1em;
+}
+figcaption {
+    text-transform: uppercase;
+    font-family: $covik;
+    color: $darkGray;
+    line-height: 1.18;
+    margin-bottom: .5em;
+}
+.brand-guidelines-cover {
+    float: right;
+    width: 50%;
+    margin: 0 0 1em 1em;
+}
+/* wordmark */
+.figure--image.image-border {
+    margin-bottom: 0;
+    img {
+        border: 1px solid $lightGray;
+    }
+}
+.ui-list {
+    margin-bottom: 2em;
+}
+/* voice */
+.edge-headline {
+    list-style: none !important;
+    padding-left: 0;
+    font-family: $masqualero;
+    font-weight: $regular;
+    font-style: italic;
+    margin: 2em 0;
+    li {
+        padding-bottom: .5em;
+    }
+}
+.edge-headline-reference {
+    display: block;
+    text-transform: uppercase;
+    font-family: $covik;
+    color: $darkGray;
+    font-weight: $regular;
+    font-size: .7em;
+    font-style: normal;
+}
+/* color */
+.grid-item {
+    div {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 55em) {
+    .grid-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+        div {
+            width: 48%;
+        }
+    }
+}
+.color-swatch {
+    width: 100%;
+    padding: .5em;
+    margin: .5em;
+    color: #fff;
+    font-size: 80%;
+    .title {
+        text-transform: uppercase;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+}
+.background--vassarBurgundy {
+    background-color: $vassarBurgundy;
+}
+.background--vassarDarkBurgundy {
+    background-color: $vassarDarkBurgundy;
+}
+.background--darkGray {
+    background-color: $darkGray;
+}
+.background--gold {
+    background-color: $gold;
+}
+.background--red {
+    background-color: $red;
+}
+.background--cream {
+    background-color: $cream;
+    color: $darkGray;
+    border: 1px solid $lightGray;
+}
+.background--rose {
+    background-color: $rose;
+    color: $darkGray;
+}
+.background--lightGray {
+    background-color: $lightGray;
+    color: $darkGray;
+}
